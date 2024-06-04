@@ -1,14 +1,14 @@
 class Usuario:
-    def _init_(self, nome: str, telefone: str, email: str):
+    def __init__(self, nome: str, telefone: str, email: str):
         self.nome = nome
         self.telefone = telefone
         self.email = email
 
-    def _str_(self) -> str:
+    def __str__(self) -> str:
         return f"Nome: {self.nome}, Telefone: {self.telefone}, Email: {self.email}"
 
 class SistemaUsuarios:
-    def _init_(self):
+    def __init__(self):
         self.usuarios: list[Usuario] = []
 
     def adicionar_usuario(self, usuario: Usuario) -> None:
@@ -94,5 +94,5 @@ def main() -> None:
         else:
             print("Opção inválida. Por favor, escolha uma opção válida.")
 
-if __name__== "_main_": main()
-
+if __name__ == "__main__":
+    main()
